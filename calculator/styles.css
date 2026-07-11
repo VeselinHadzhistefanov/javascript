@@ -1,0 +1,50 @@
+.calculator {
+  display: flex;
+  flex-wrap: wrap;
+  width: 160px;
+  height: 200px;
+}
+
+.top-row {
+  width: 160px;
+  height: 40px;
+  display: flex;
+}
+
+.mid-section {
+  width: 160px;
+  height: 120px;
+  display: flex;
+}
+
+.number-pad {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side-section {
+  width: 40px;
+  height: 120px;
+}
+
+.bottom-row {
+  width: 160px;
+  height: 40px;
+  display: flex;
+}
+
+
+button {
+  width: 40px;
+  height: 40px;
+}
+
+#plus {
+  height: 80px
+}
+
+#equals {
+  width: 80px;
+}
