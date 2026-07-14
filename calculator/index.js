@@ -1,9 +1,9 @@
-let display = document.getElementsByClassName("display").item(0)
+let display = document.getElementById("display")
 let numbers = document.getElementsByClassName("number-pad-button")
 
 for (let i = 0; i < numbers.length; i++) {
   let element = numbers.item(i)
-  
+
   element.addEventListener("click", (e) => {
     //log event
     let digit = i + 1

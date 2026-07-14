@@ -4,6 +4,7 @@ contents
 + javascript concepts
   - promise pattern
   + callback api prototype
+- paddding in css
 
 changelog
 - make layout contain 2 flex-box elements (overflow only on botton row on longer "equals-sign" button)
