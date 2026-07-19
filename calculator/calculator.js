@@ -6,14 +6,40 @@ const EntryMode = Object.freeze({
 
 class EntryNode {
   constructor(sy, next) {
-    this.sy = (sy != null) ? sy : ""
-    this.next = next
+    this.sy = (sy != null) ? sy : null;
+    this.next = (next != null) ? next : null;
+  }
+}
+
+class OperationNode {
+  constructor(entr, op) {
+    this.entr = (entr != null) ? entr : null;
+    this.op = (op != null) ? op : op;
+  }
+  complete = function (entr, op) {
+    switch (op) {
+      case "+":
+        this.entr += entr;
+        break;
+      case "-":
+        this.entr -= entr;
+        break;
+      case "*":
+        this.entr *= entr;
+        break;
+      case "/":
+        this.entr /= entr;
+        break;
+    }
+    this.op = (op != null) ? op : null;
+    return this.entr;
   }
 }
 
 let display = document.getElementById("display")
 let entryMode = EntryMode.WHOLE
 let entryStack = null
+let operation = null
 
 // event listener for numeric buttons
 const numericButtons = document.getElementsByClassName("numeric-button")
